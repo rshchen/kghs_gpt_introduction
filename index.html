@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>My Reveal.js Presentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>歡迎來到 Reveal.js！</section>
+      <section>這是第二張投影片</section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,             // 顯示控制箭頭
+      progress: true,             // 顯示進度條
+      slideNumber: true,          // 顯示當前投影片編號
+      keyboard: true,             // 啟用鍵盤控制
+      mouseWheel: false,          // 滑鼠滾輪切換
+      touch: true,                // 支援觸控
+      hash: true,                 // 支援網址 hash 導航
+      center: true,               // 內容垂直置中
+      transition: 'slide',        // 過場動畫：'none', 'fade', 'slide', 'convex', 'concave', 'zoom'
+      transitionSpeed: 'default', // 過場動畫速度：'default', 'fast', 'slow'
+      backgroundTransition: 'fade'// 背景過場動畫
+    });
+
+  </script>
+</body>
+</html>

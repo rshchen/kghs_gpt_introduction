@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Reveal.js 官方範例和建置產物（如有）
+dist/
+reveal.js.zip
+
+# Mac 系統
+.DS_Store
+
+# 你自己的產生檔案（如有 build/ 或 output/ 資料夾）
+build/
+output/
