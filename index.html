@@ -5,15 +5,82 @@
   <title>My Reveal.js Presentation</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <style>
+    .year {
+      font-size: 33px;
+      color: white;
+    }
+    .fade {
+      color: gray;
+    }
+    .text-left {
+      text-align: left;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .space {
+      margin-left: 1em;
+    }
+  </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <section>歡迎來到 Reveal.js！</section>
-      <section>這是第二張投影片</section>
+      <section>
+      
+        <img src="images/kghs.gif" alt="kghs" width="120" />
+        <div class="text-center">
+          <h2>訓練你的萬用工具人：ChatGPT</h2>
+          <h3>雄女數學科研習 2025.12.10</h3>
+          <h3>講者：陳瑞祥</h3>
+        </div>
+      </section>
+
+      <section>
+        <h2>經歷</h2>
+        <div style="font-size: 40px;">
+        <ul>
+          <li>藏識科技公司<span class="space"></span>韌體部軟體工程師 <span class="year">(2025/08-至今)</span></li>
+          <li>高雄市立高雄女中<span class="space"></span>數學代理教師 <span class="year">(2024/08-2025/07)</span></li>
+          <li>台中市立文華高中<span class="space"></span>數學代理教師 <span class="year">(2023/08-2024/07)</span></li>
+          <li>台中市立臺中一中<span class="space"></span>數學代理教師 <span class="year">(2022/08-2023/07)</span></li>
+          <li>國立家齊高中<span class="space"></span>數學代課教師 <span class="year">(2021/08-2022/07)</span></li>
+          <li>國立臺南一中<span class="space"></span>數學代課教師 <span class="year">(2020/08-2021/07)</span></li>
+        </ul>
+        </div>
+      </section>
+
+
+      <section>
+        <h3>作品介紹</h3>
+        <ul>
+           <li >使用者介面</li>
+            <li>前後端工程</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>作品介紹</h3>
+        <ul>
+           <li >使用者介面</li>
+          <li class="fade">前後端工程</li>
+        </ul>
+      </section>
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
   <script>
     Reveal.initialize({
       controls: true,             // 顯示控制箭頭
@@ -26,9 +93,9 @@
       center: true,               // 內容垂直置中
       transition: 'slide',        // 過場動畫：'none', 'fade', 'slide', 'convex', 'concave', 'zoom'
       transitionSpeed: 'default', // 過場動畫速度：'default', 'fast', 'slow'
-      backgroundTransition: 'fade'// 背景過場動畫
+      backgroundTransition: 'fade',// 背景過場動畫
+      plugins: [ RevealMarkdown ] // 使用 Markdown 插件
     });
-
   </script>
 </body>
 </html>
