@@ -5,24 +5,7 @@
   <title>My Reveal.js Presentation</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
-    <style>
-    .year {
-      font-size: 33px;
-      color: white;
-    }
-    .fade {
-      color: gray;
-    }
-    .text-left {
-      text-align: left;
-    }
-    .text-center {
-      text-align: center;
-    }
-    .space {
-      margin-left: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="reveal">
@@ -31,7 +14,7 @@
       
         <img src="images/kghs.gif" alt="kghs" width="120" />
         <div class="text-center">
-          <h2>訓練你的萬用工具人：ChatGPT</h2>
+          <h2>使用你的萬用工具人：ChatGPT</h2>
           <h3>雄女數學科研習 2025.12.10</h3>
           <h3>講者：陳瑞祥</h3>
         </div>
@@ -51,36 +34,445 @@
         </div>
       </section>
 
+      <section>
+        <h2>我和ChatGPT的一些合作</h2>
+        <div style="font-size: 40px;">
+        <ul>
+          <li class="fragment">幫助學生規劃台南一日遊</li>
+          <li class="fragment">幫助學生成功入選<br>「第 25 屆高中生人文及社會科學營」</li>
+          <li class="fragment">各花一週學會 Ｃ++ 和 C#</li>
+          <li class="fragment">開發成績查詢 line bot</li>
+          <li class="fragment">通過公司第一個月的入職考試</li>
+        </ul>
+        </div>
+      </section>      
 
       <section>
-        <h3>作品介紹</h3>
+        <h3>ChatGPT介紹</h3>
         <ul>
-           <li >使用者介面</li>
-            <li>前後端工程</li>
+          <li class="fragment">生成式AI</li>
+          <li class="fragment">原理簡介</li>
+          <li class="fragment">使用須知</li>
+          <li class="fragment">提示語</li>
+          <li class="fragment">範例</li>
         </ul>
       </section>
 
       <section>
-        <h3>作品介紹</h3>
+        <h3>ChatGPT介紹</h3>
         <ul>
-           <li >使用者介面</li>
-          <li class="fade">前後端工程</li>
+          <li>生成式AI</li>
+          <li class="fade">原理簡介</li>
+          <li class="fade">使用須知</li>
+          <li class="fade">提示語</li>
+          <li class="fade">範例</li>
         </ul>
       </section>
 
+      <section>
+        <h3>ChatGPT是一種生成式AI</h3>
+          <ul>
+            <li class="fragment" >
+              生成式AI：能夠創造複雜有結構的新內容。
+            </li>
+          </ul>
+        <div class="icon-row">
+          <div class="fragment" class="icon-col">
+            <img src="images/article.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">文章</div>
+          </div>
+          <div class="fragment" class="icon-col">
+            <img src="images/photo.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">照片</div>
+          </div>
+          <div class="fragment" class="icon-col">
+            <img src="images/wave-sound.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">音訊</div>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h3>ChatGPT介紹</h3>
+        <ul>
+          <li class="fade">生成式AI</li>
+          <li>原理簡介</li>
+          <li class="fade">使用須知</li>
+          <li class="fade">提示語</li>
+          <li class="fade">範例</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>ChatGPT模型的訓練</h3>
+        <div class="icon-row">
+          <div class="rectangle-box fragment" style="font-size: 30px;" data-fragment-index="1">
+            「訓練截止時間」前的資料<br>（公開可取得的文本、授權資料、人類標註/合成資料）
+            <div style="color: red;" class="fragment" data-fragment-index="4">英>簡中>繁中</div>
+          </div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img fragment" style="width: 200px;" data-fragment-index="2"></div>
+          <div class="rectangle-box fragment" style="font-size: 30px;" data-fragment-index="2">深度學習</div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img fragment" style="width: 200px;" data-fragment-index="3"></div>
+          <div class="rectangle-box fragment" style="font-size: 30px;" data-fragment-index="3">ChatGPT</div>
+        </div>  
+      </section>
+
+      <section>
+        <h3>ChatGPT的原理：文字接龍<span class="fragment" style="font-size: 30px; color:red;">大語言模型（LLM）</span></h3>
+        <div style="font-size: 40px; text-align: left;" class="fragment">「台灣最高的山是哪座？」</div>
+        <div class="icon-grid-5 fragment">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div class="rectangle-box" style="font-size: 30px;">ChatGPT</div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div><canvas id="step1-chart" width="500" height="300"></canvas></div>
+        </div>
+        <div class="icon-grid-5 fragment">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div>
+            <img class="invert-img icon-img-large" src="images/dice.png">
+            <div class="icon-label">擲骰子</div>
+          </div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div>玉</div>
+        </div>
+      </section>
+
+            <section>
+        <h3>ChatGPT的原理：文字接龍</span></h3>
+        <div style="font-size: 40px; text-align: left;" class="fragment">「台灣最高的山是哪座？玉」</div>
+        <div class="icon-grid-5 fragment">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div class="rectangle-box" style="font-size: 30px;">ChatGPT</div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div><canvas id="step2-chart" width="500" height="700"></canvas></div>
+        </div>
+        <div class="icon-grid-5 fragment">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div>
+            <img class="invert-img icon-img-large" src="images/dice.png">
+            <div class="icon-label">擲骰子</div>
+          </div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div>山</div>
+        </div>
+      </section>
+
+      <section>
+        <h3>ChatGPT的原理：文字接龍</h3>
+        <div style="font-size: 40px; text-align: left;" class="fragment">「台灣最高的山是哪座？玉山」</div>
+        <div class="icon-grid-5 fragment">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div class="rectangle-box" style="font-size: 30px;">ChatGPT</div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div><canvas id="step3-chart" width="500" height="300"></canvas></div>
+        </div>
+        <div class="icon-grid-5 fragment">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div>
+            <img class="invert-img icon-img-large" src="images/dice.png">
+            <div class="icon-label">擲骰子</div>
+          </div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div>。</div>
+        </div>
+      </section>
+
+      <section>
+        <h3>ChatGPT的原理：文字接龍<span style="font-size: 30px;text-align: left; color:red;" class="fragment" data-fragment-index="4">可能瞎掰（AI 幻覺）！</span></h3>
+        <div style="font-size: 40px; text-align: left;" class="fragment" data-fragment-index="1">「台灣最高的山是哪座？玉山。」</div>
+        <div class="icon-grid-5 fragment" data-fragment-index="2">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div class="rectangle-box" style="font-size: 30px;">ChatGPT</div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div><canvas id="step4-chart" width="500" height="700"></canvas></div>
+        </div>
+        <div class="icon-grid-5 fragment" data-fragment-index="3">
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div>
+            <img class="invert-img icon-img-large" src="images/dice.png">
+            <div class="icon-label">擲骰子</div>
+          </div>
+          <div><img src="images/right-arrow.png" class="invert-img icon-img"></div>
+          <div style="font-size:30px;color:#36a2eb;">[end]</div>
+        </div>
+      </section>
 
 
+      <section>
+        <h3>ChatGPT介紹</h3>
+        <ul>
+          <li class="fade">生成式AI</li>
+          <li class="fade">原理簡介</li>
+          <li>使用須知</li>
+          <li class="fade">提示語</li>
+          <li class="fade">範例</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h3>ChatGPT的使用須知</h3>
+        <div class="icon-row">
+          <div class="fragment" class="icon-col">
+            <img src="images/deadline.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">GPT 的知識有「時間截點」</div>
+          </div>
+          <div class="fragment" class="icon-col">
+            <img src="images/internet.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">基礎版本無法即時閱讀網址內容
+              <br>（需付費升級、使用外掛或 GPT-5）
+            </div>
+          </div>
+        </div> 
+      </section>
+
+      <section>
+        <h3>ChatGPT的使用須知</h3>
+        <div class="icon-row">
+          <div class="fragment" class="icon-col">
+            <img src="images/search-engine.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">基礎版本無法直接使用搜尋引擎
+              <br>（需付費升級、使用外掛或 GPT-5）
+            </div>
+          </div>
+          <div class="fragment" class="icon-col">
+            <img src="images/address.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">不能直接查詢地圖
+              <br>（需串接 API 或使用外掛）
+            </div>
+          </div>
+        </div> 
+      </section>
+
+      <section>
+        <h3>ChatGPT的使用須知</h3>
+        <div class="icon-row">
+          <div class="fragment" class="icon-col">
+            <img src="images/memory.png" class="invert-img" style="height: 200px;">
+            <div class="icon-label">    GPT 的「記憶力」有限
+              <br> （只會記得最近的訊息，太久之前的內容會被遺忘）
+            </div>
+          </div>
+        </div> 
+      </section>
+
+      <section>
+        <h3>ChatGPT介紹</h3>
+        <ul>
+          <li class="fade">生成式AI</li>
+          <li class="fade">原理簡介</li>
+          <li class="fade">使用須知</li>
+          <li>提示語</li>
+          <li class="fade">範例</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>提示語（Prompt）</h3>
+        <ul>
+          <li class="fragment">什麼是 Prompt？
+            <ul>
+              <li class="fragment">又被戲稱為「咒語」。</li>
+              <li class="fragment">給 AI 的文字指令或描述。</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="fragment">
+          <img src="images/spell-book.png" class="invert-img" style="height: 250px; margin-top: 20px;">
+        </div>
+      </section>
+
+      <section>
+        <h3>好的提示語</h3>
+        <ul>
+          <li class="fragment">明確說明你的需求與目標。</li>
+          <li class="fragment">主動提供相關背景或資料。</li>
+          <li class="fragment">舉例、示範你想要的格式或內容。</li>
+          <li class="fragment">要求 GPT 展開推理過程。</li>
+          <li class="fragment">如有檔案，可上傳給 GPT 分析。</li>
+        </ul>
+        <div class="fragment">
+          <img src="images/magic-wand.png" class="invert-img" style="height: 200px; margin-top: 20px;">
+        </div>
+      </section>
+
+      <section>
+        <h3>好的提示語</h3>
+        <ul>
+          <li class="fragment">將複雜任務拆解成小步驟，逐步請 AI 協助。</li>
+          <li class="fragment">可加入「這對我很重要」等情緒增強語（情緒勒索、恐嚇、賄賂）。</li>
+          <li class="fragment">請 GPT 自我檢查並驗證自己的答案。</li>
+          <li class="fragment">要求 GPT 多次嘗試後，採多數決選出答案。</li>
+        </ul>
+        <div class="fragment">
+          <img src="images/cat.png" style="height: 250px; margin-top: 20px;">
+        </div>
+      </section>
+
+      <section>
+        <h3>ChatGPT介紹</h3>
+        <ul>
+          <li class="fade">生成式AI</li>
+          <li class="fade">原理簡介</li>
+          <li class="fade">使用須知</li>
+          <li class="fade">提示語</li>
+          <li>範例</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>ChatGPT範例</h3>
+        <ul>
+          <li>規劃台南一日遊（不良示範）</li>
+          <li class="fade">規劃台南一日遊（較佳示範）</li>
+          <li class="fade">使用須知</li>
+          <li class="fade">提示語</li>
+          <li class="fade">範例</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（不良示範）</h3>
+        <div class="fragment">
+          <img src="images/eg1-1.png" style="width: 100%; ">
+        </div>
+      </section>
 
 
+      <section>
+        <h3>範例：規劃台南一日遊（不良示範）</h3>
+        <div class="fragment">
+          <img src="images/eg1-2.png" style="width: 100%; ">
+        </div>
+      </section>
 
+      <section>
+        <h3>範例：規劃台南一日遊（不良示範）</h3>
+        <div class="fragment">
+          <img src="images/eg1-3.png" style="height: 600px; ">
+        </div>
+      </section>
 
+      <section>
+        <h3>範例：規劃台南一日遊（不良示範）</h3>
+        <div class="fragment">
+          <img src="images/eg1-4.png" style="height: 150px; ">
+        </div>
+        <div class="fragment">
+          <img src="images/eg1-5.png" style="height: 350px; ">
+        </div>
+      </section>
 
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-1.png" style="width: auto; ">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-2.png" style="height: 550px; ">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-3.png" style="height: 550px; ">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-4.png" style="height: 550px; ">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-5.png" style="width: auto; ">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-6.png" style="width: auto; " class="invert-img">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-7.png" style="width: auto; " class="invert-img">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-8.png" style="height: 500px; " class="invert-img">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-9.png" style="width: auto; " class="invert-img">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-10.png" style="width: auto; " class="invert-img">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-11.png" style="width: auto; " class="invert-img">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-12.png" style="height: 550px; " class="invert-img">
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：規劃台南一日遊（較佳示範）</h3>
+        <div class="fragment">
+          <img src="images/eg2-13.png" style="width: auto; " class="invert-img">
+        </div>
+        <div class="fragment">
+          最後再整理一下，成果如連結<br>
+          <a href="https://hackmd.io/@VictorJuiHsiang/Syt_Fh4Ixe" target="_blank"> 台南一日遊（中西區）</a>
+        </div>
+      </section>
+
+      <section>
+        <h3>範例：推薦信撰寫</h3>
+        <div class="fragment">
+          <img src="images/eg2-12.png" style="height: 550px; " class="invert-img">
+        </div>
+      </section>
 
 
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <script src="script.js"></script>
   <script>
     Reveal.initialize({
       controls: true,             // 顯示控制箭頭

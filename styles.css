@@ -1,0 +1,79 @@
+.year {
+    font-size: 33px;
+    color: white;
+}
+.fade {
+    color: gray;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.space {
+    margin-left: 1em;
+}
+
+.icon-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5格平均分配 */
+  gap: 2em;
+  align-items: center; /* 垂直置中，或可用 end/ start */
+  justify-items: center; /* 水平置中格子內容 */
+}
+.icon-row {
+  display: flex;
+  justify-content: space-evenly; /* 或 space-between, space-around */
+  align-items: center;         /* 讓圖和文字對齊底部 */
+  gap: 2em;                      /* 圖標間隔，視需要加 */
+}
+
+.icon-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;           /* 讓文字置中在圖片下方 */
+  /* min-height: 60px; */
+}
+
+.icon-label {
+  margin-top: 0.5em;
+  font-size: 30px;
+  color: #eee;
+  text-align: center;
+}
+
+.icon-col img, .icon-col canvas {
+  /* max-width: 100%; */
+  /* max-height: 300px; */
+  object-fit: contain;
+  display: block;
+}
+
+/* 反轉顏色 */
+.invert-img {
+  filter: invert(1);
+}
+
+.rectangle-box {
+  border: 2px solid;
+  padding: 0.5em 1em;  /* 可選，讓框內留點空 */
+  border-radius: 8px;  /* 可選，讓框角圓一點 */
+  display: inline-block; /* 讓框只包住內容 */
+  margin-bottom: 0.5em; /* 可選，下方留點空 */
+}
+.red-text {
+  color: red;
+  margin-left: 0.5em;  /* 句號後留點空 */
+  font-weight: bold;   /* 可選，加粗更明顯 */
+}
+
+.icon-img {
+  width: 60px;
+  height: auto;
+}
+.icon-img-large {
+  height: 100px;
+  width: auto;
+}
+
